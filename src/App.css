@@ -1,0 +1,699 @@
+/* App.css */
+
+/* Phone Screen Container */
+.phone-screen {
+  width: 375px;
+  height: 812px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin: 20px auto;
+  overflow: hidden;
+  position: relative;
+  background-color: #000; /* Fallback color */
+  background-image: url('src/assets/gloomy-philadelphia-weather-uqdzch41josiui9g.jpg');   
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+/* Overlay for Background Opacity */
+.phone-screen::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Adjust color and opacity */
+  z-index: 0; /* Ensures the overlay is behind the content */
+  pointer-events: none; /* Ensures the overlay doesn't interfere with clicks */
+}
+
+/* Top Bar */
+.top-bar {
+  width: 100%;
+  height: 30px;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/* Weather Container */
+.weather-container {
+  position: absolute;
+  width: 375px;
+  height: 195px;
+  left: 0;
+  top: 78px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Location Icon */
+.location-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 35px;
+  top: 11px;
+  color: white;
+}
+
+/* City Name */
+.city-name {
+  position: absolute;
+  max-width: 190px;
+  height: 44px;
+  left: 70px;
+  top: 0;
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 37px;
+  line-height: 44px;
+  text-align: left;
+  letter-spacing: -0.005em;
+  color: #ffffff;
+  white-space: nowrap; /* Prevents wrapping */
+  text-overflow: ellipsis; /* Adds ellipsis for overflow text */
+}
+
+/* Temperature */
+.temperature {
+  position: absolute;
+  width: 123px;
+  height: 101px;
+  left: 35px;
+  top: 44px;
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 85px;
+  line-height: 101px;
+  text-align: center;
+  letter-spacing: -0.005em;
+  color: #ffffff;
+}
+
+/* Feels Like */
+.feels-like {
+  position: absolute;
+  width: 150px;
+  height: 24px;
+  left: 166px;
+  top: 79px;
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: left;
+  color: #ffffff;
+  white-space: nowrap; /* Prevents wrapping */
+  overflow: hidden; /* Hides overflow */
+  text-overflow: ellipsis; /* Adds ellipsis for overflow text */
+}
+
+/* High and Low Temperatures */
+.high-low {
+  position: absolute;
+  width: 170px;
+  height: 24px;
+  left: 166px;
+  top: 106px;
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: left;
+  color: #ffffff;
+  white-space: nowrap; /* Prevents wrapping */
+  overflow: hidden; /* Hides overflow */
+  text-overflow: ellipsis; /* Adds ellipsis for overflow text */
+}
+
+/* Air Quality Container */
+.air-quality-container {
+  position: absolute;
+  width: 165px;
+  height: 143px;
+  left: 18px;
+  top: 240px;
+}
+
+/* Air Quality Box */
+.air-quality-box {
+  position: relative; /* Make this relative to contain inner elements */
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Air Quality Index */
+.air-quality-index {
+  position: absolute;
+  width: 154px;
+  height: 64px;
+  left: 10px;
+  top: 34px;
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 54px;
+  line-height: 64px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Air Quality Labels */
+.air-quality-labels {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  width: 114px;
+  height: 18px;
+  left: 15px;
+  top: 10px;
+}
+
+/* Air Quality Icon */
+.air-quality-icon {
+  width: 22px;
+  height: 18px;
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+  opacity: 0.3;
+}
+
+/* Air Quality Title */
+.air-quality-title {
+  width: 87px;
+  height: 18px;
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 0.3;
+  white-space: nowrap; /* Prevents wrapping */
+
+  text-overflow: ellipsis; /* Adds ellipsis for overflow text */
+}
+
+/* Moderate Label */
+.moderate {
+  position: absolute;
+  width: 61px;
+  height: 18px;
+  left: 52px;
+  top: 100px;
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  color: #ffffff;
+  white-space: nowrap; /* Prevents wrapping */
+  text-overflow: ellipsis; /* Adds ellipsis for overflow text */
+}
+
+/* Air Quality Gradient Bar */
+.air-quality-gradient {
+  position: absolute;
+  width: 115px;
+  height: 4px;
+  left: 25px;
+  top: 125px;
+  display: flex;
+  align-items: center;
+}
+
+/* Air Quality Bar */
+.air-quality-bar {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #4792F2 0%, #65DB7C 13.62%, #F5E753 31.32%, #E63A52 53.02%, #75212D 90%);
+  border-radius: 44px;
+}
+
+/* Air Quality Ellipse */
+.air-quality-ellipse {
+  position: absolute;
+  width: 5.35px;
+  height: 8px;
+  left: 45px; /* Positioned relative to gradient */
+  top: -2px;
+  background: #C4C4C4;
+}
+
+/* Air Quality Small Ellipse */
+.air-quality-small-ellipse {
+  position: absolute;
+  width: 3.57px;
+  height: 4px;
+  left: 46px; /* Positioned relative to gradient */
+  top: 0px;
+  background: #FFFFFF;
+}
+
+/* Bottom Bar */
+.bottom-bar {
+  width: 60px;
+  height: 4px;
+  background-color: black;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+}
+
+/* Group 2 Container */
+.group-2-container {
+  position: absolute;
+  width: 165px;
+  height: 143px;
+  left: 193px;
+  top: 240px;
+}
+
+/* Group 2 Box */
+.group-2-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Weather Hours */
+.weather-hours {
+  position: absolute;
+  width: 136px;
+  height: 114px;
+  left: 15px; /* Adjusted for alignment within the box */
+  top: 13px; /* Adjusted for alignment within the box */
+  display: flex;
+  flex-direction: column;
+  gap: 18px; /* Adjust spacing between rows */
+}
+
+/* Weather Row */
+.weather-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px; /* Adjust spacing between elements */
+  margin-left: -13px;
+}
+
+/* Now, Time, Temperature Small */
+.time, .now, .temperature-small {
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  color: #ffffff;
+  white-space: nowrap; /* Prevents wrapping */
+}
+
+/* Weather Icon */
+.weather-icon {
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #ffffff;
+  white-space: nowrap; /* Prevents wrapping */
+}
+
+/* Line 1 */
+.line-1 {
+  position: absolute;
+  width: 144px;
+  height: 0;
+  left: 10px;
+  top: 45px;
+  border: 0.3px solid rgba(152, 156, 166, 0.2);
+}
+
+/* Line 2 */
+.line-2 {
+  position: absolute;
+  width: 144px;
+  height: 0;
+  left: 10px;
+  top: 93px;
+  border: 0.3px solid rgba(152, 156, 166, 0.2);
+}
+
+/* Group 3 Container */
+.group-3-container {
+  position: absolute;
+  width: 335px;
+  height: 143px;
+  left: 20px;
+  top: 404px;
+}
+
+/* Group 3 Box */
+.group-3-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* Alert Row */
+.alert-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  width: 204px;
+  height: 18px;
+  left: 13px;
+  top: 13px;
+}
+
+/* Alert Icon */
+.alert-icon {
+  width: 15px;
+  height: 18px;
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+/* Alert Text */
+.alert-text {
+  width: 184px;
+  height: 18px;
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+  opacity: 0.8;
+  white-space: nowrap; /* Prevents wrapping */
+  text-overflow: ellipsis; /* Adds ellipsis for overflow text */
+}
+
+/* Alert Description */
+.alert-description {
+  position: absolute;
+  width: 312px;
+  height: 65px;
+  left: 13px;
+  top: 41px;
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  color: #ffffff;
+  white-space: normal; /* Allows wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adds ellipsis for overflow text */
+}
+
+/* See More */
+.see-more {
+  position: absolute;
+  width: 312px;
+  height: 21px;
+  left: 13px;
+  top: 115px;
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  text-decoration: underline;
+  color: #ffffff;
+  white-space: nowrap; /* Prevents wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adds ellipsis for overflow text */
+}
+
+/* List Container */
+.list-container {
+  position: absolute;
+  width: 335px;
+  height: 205px;
+  left: 21px;
+  top: 568px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 0.5px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(2px); 
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: 10px;
+  z-index: 1; /* Ensures container is below content */
+}
+
+/* List Header */
+.list-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  width: 156px;
+  height: 18px;
+  position: absolute;
+  left: 15px;
+  top: 12px;
+  z-index: 2; /* Brings text above the dark layer */
+}
+
+/* Forecast Header */
+.forecast-header {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Forecast Icon */
+.forecast-icon {
+  width: 19px;
+  height: 18px;
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+  opacity: 0.3;
+  z-index: 2; /* Ensures visibility */
+}
+
+/* Forecast Title */
+.forecast-title {
+  width: 132px;
+  height: 18px;
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+  opacity: 0.3;
+  white-space: nowrap; /* Prevents wrapping */
+  text-overflow: ellipsis; /* Adds ellipsis for overflow text */
+  z-index: 2; /* Ensures visibility */
+}
+
+/* Day Name */
+.day {
+  width: 80px;
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #ffffff;
+  white-space: nowrap; /* Prevents wrapping */
+  text-overflow: ellipsis; /* Adds ellipsis for overflow text */
+  z-index: 2; /* Ensures visibility */
+}
+
+
+/* Line */
+.line {
+  position: absolute;
+  width: 305px;
+  height: 0;
+  top: 50px; /* Adjust position relative to row */
+  opacity: 0.2;
+  border: 0.2px solid #ffffff;
+  z-index: 2; /* Ensures visibility */
+}
+
+/* Icon and Humidity Container */
+.icon-humidity {
+  display: flex;
+  flex-direction: column; /* Stacks the icon and humidity vertically */
+  align-items: center; /* Centers the icon and humidity horizontally */
+  gap: 1px; /* Space between the icon and humidity */
+  z-index: 2; /* Ensures visibility */
+  margin-right: -110px; /* Moves the icon-humidity closer to the temperature */
+}
+
+
+/* List Row */
+.list-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Spaces children evenly, adjusting this helps move items */
+  padding: 10px 0;
+  width: 305px;
+  height: 50.6px;
+  left: 6px;
+  margin-top: 10px; /* Adjust for spacing between rows */
+  z-index: 2; /* Ensures visibility */
+}
+
+
+/* Forecast Icon */
+.weather-icon {
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #ffffff;
+  white-space: nowrap; /* Prevents wrapping */
+  text-overflow: ellipsis; /* Adds ellipsis for overflow text */
+  z-index: 2; /* Ensures visibility */
+}
+
+/* Humidity */
+.humidity {
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  color: #81CFFA;
+  white-space: nowrap; /* Prevents wrapping */
+  text-overflow: ellipsis; /* Adds ellipsis for overflow text */
+  z-index: 2; /* Ensures visibility */
+  margin-top: 2px; /* Slight margin to space from icon */
+}
+
+/* Temperature Small */
+.temperature-small {
+  width: 35px;
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #ffffff;
+  z-index: 2; /* Ensures visibility */
+}
+
+/* Status Bar */
+.status-bar {
+  position: absolute;
+  width: 375px;
+  height: 44px;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  z-index: 10; /* Ensures it's on top */
+}
+
+/* Status Left (Time) */
+.status-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Time */
+.time {
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+  margin-top: 5px;
+  margin-left: 23px;
+}
+
+/* Status Right (Battery, WiFi, Signal) */
+.status-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+/* Battery Structure */
+.battery {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 22px;
+  height: 11px;
+}
+
+.battery-body {
+  width: 18px;
+  height: 7.33px;
+  background: #FFFFFF;
+  border-radius: 1.1px;
+  opacity: 0.8;
+}
+
+.battery-cap {
+  width: 1.33px;
+  height: 4px;
+  background: #FFFFFF;
+  position: absolute;
+  right: -4px;
+  top: 3.5px;
+  opacity: 0.4;
+}
+
+.battery-fill {
+  width: 14px;
+  height: 6px;
+  background: #FFFFFF;
+  border-radius: 1.1px;
+  opacity: 0.6;
+  margin-left: 2px;
+}
